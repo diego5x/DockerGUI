@@ -42,6 +42,11 @@ class Ui_MainWindow(object):
         self.tableContainers.setHorizontalHeaderItem(2, item)
         item = QtWidgets.QTableWidgetItem()
         self.tableContainers.setHorizontalHeaderItem(3, item)
+        self.toolButton = QtWidgets.QToolButton(self.centralwidget)
+        self.toolButton.setGeometry(QtCore.QRect(640, 10, 24, 24))
+        icon = QtGui.QIcon.fromTheme("QIcon::ThemeIcon::ObjectRotateRight")
+        self.toolButton.setIcon(icon)
+        self.toolButton.setObjectName("toolButton")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 801, 23))
@@ -69,6 +74,7 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "IMAGEM"))
         item = self.tableContainers.horizontalHeaderItem(3)
         item.setText(_translate("MainWindow", "STATUS"))
+        self.toolButton.setText(_translate("MainWindow", "..."))
 
 
 if __name__ == "__main__":
