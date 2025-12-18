@@ -13,6 +13,7 @@ class MainWindow(QMainWindow):
 
         self.listar_containers()
         
+        self.ui.toolButton.clicked.connect(self.refresh_lista)
         self.ui.startButton.clicked.connect(self.start_container)
         self.ui.stopButton.clicked.connect(self.stop_container)
         self.ui.removeButton.clicked.connect(self.remove_container)
@@ -32,7 +33,9 @@ class MainWindow(QMainWindow):
             self.ui.tableContainers.setItem(row, 1, QTableWidgetItem(name))
             self.ui.tableContainers.setItem(row, 2, QTableWidgetItem(image))
             self.ui.tableContainers.setItem(row, 3, QTableWidgetItem(status))
-
+    
+    def refresh_lista(self):
+        self.listar_containers()
 
     def container_selecionado(self):
         row = self.ui.tableContainers.currentRow()
@@ -60,6 +63,7 @@ class MainWindow(QMainWindow):
         if nome:
             self.client.containers.get(nome).remove(force=True)
             self.listar_containers()
+    
 
 
 if __name__ == "__main__":
