@@ -4,13 +4,14 @@ O **DockerGUI** é uma aplicação desenvolvida em Python com interface gráfica
 
 Este projeto serve como estudo prático de desenvolvimento de interfaces gráficas usando Qt/PyQt.
 
+<img src="assets/dockerGUI.png"/>
 ---
 
 ## Pré‑Requisitos
 
-- ✅ Python 3
-- ✅ Docker instalado e rodando no seu sistema
-- ✅ Permissões para acessar o **docker.sock** (geralmente executando com permissões de administrador ou adicionando seu usuário ao grupo Docker)
+- Python 3
+- Docker instalado e rodando no seu sistema
+- Permissões para acessar o **docker.sock** (geralmente executando com permissões de administrador ou adicionando seu usuário ao grupo Docker)
 
 ---
 
@@ -35,7 +36,7 @@ Este projeto serve como estudo prático de desenvolvimento de interfaces gráfic
 
 ---
 
-## ▶️ Como Usar
+## Como Usar
 
 Execute o programa principal com Python:
 
